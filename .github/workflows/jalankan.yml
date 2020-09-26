@@ -1,0 +1,17 @@
+name: build svelte
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Jalankan
+        run: ./hello
